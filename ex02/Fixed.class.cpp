@@ -22,6 +22,26 @@ int Fixed::toInt(void) const
 	return (this->number / (1 << this->fractional_bits));
 }
 
+Fixed &Fixed::min(Fixed &value1, Fixed &value2)
+{
+	return (value1 < value2 ? value1 : value2);
+}
+
+Fixed &Fixed::max(Fixed &value1, Fixed &value2)
+{
+	return (value1 < value2 ? value2 : value1);
+}
+
+Fixed const &Fixed::min(Fixed const &value1, Fixed const &value2)
+{
+	return (value1 < value2 ? value1 : value2);
+}
+
+Fixed const &Fixed::max(Fixed const &value1, Fixed const &value2)
+{
+	return (value1 < value2 ? value2 : value1);
+}
+
 Fixed &	Fixed::operator=(const Fixed &assign)
 {
 	if (this != &assign)
