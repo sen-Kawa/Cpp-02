@@ -1,5 +1,14 @@
 #include "Fixed.class.hpp"
 
+void Fixed::setRawBits(const int raw)
+{
+	std::cout
+		<< "setRawBits member function called"
+	<< std::endl;
+	this->number = raw;	
+	return ;
+}
+
 int	Fixed::getRawBits(void) const
 {
 	std::cout
