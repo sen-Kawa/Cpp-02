@@ -42,6 +42,36 @@ Fixed const &Fixed::max(Fixed const &value1, Fixed const &value2)
 	return (value1 < value2 ? value2 : value1);
 }
 
+bool Fixed::operator==(const Fixed &param) const
+{
+	return (this->number == param.number);
+}
+
+bool Fixed::operator!=(const Fixed &param) const
+{
+	return (this->number != param.number);
+}
+
+bool Fixed::operator<=(const Fixed &param) const
+{
+	return (this->number <= param.number);
+}
+
+bool Fixed::operator>=(const Fixed &param) const
+{
+	return (this->number >= param.number);
+}
+
+bool Fixed::operator>(const Fixed &param) const
+{
+	return (this->number > param.number);
+}
+
+bool Fixed::operator<(const Fixed &param) const
+{
+	return (this->number < param.number);
+}
+
 Fixed &	Fixed::operator=(const Fixed &assign)
 {
 	if (this != &assign)
