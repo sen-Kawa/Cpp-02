@@ -8,6 +8,15 @@ Fixed::Fixed(void) : number(0)
 	return ;
 }
 
+Fixed::Fixed(Fixed const &src)
+{
+	std::cout
+		<< "Copy constructor called"
+	<< std::endl;
+	*this = src;
+	return ;
+}
+
 Fixed::~Fixed(void)
 {
 	return ;
