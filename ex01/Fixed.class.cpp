@@ -25,7 +25,7 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt(void) const
 {
-	
+	return (this->number / (1 << this->fractional_bits));
 }
 
 Fixed &	Fixed::operator=(const Fixed &assign)
@@ -53,6 +53,7 @@ Fixed::Fixed(const int param)
 	std::cout
 		<< "Int constructor called"
 	<< std::endl;
+	this->number = param * (1 << this->fractional_bits);
 	return ;
 }
 
@@ -61,6 +62,7 @@ Fixed::Fixed(const float param)
 	std::cout
 		<< "Float constructor called"
 	<< std::endl;
+	this->number = roundf(param * (1 << this->fractional_bits));
 	return ;
 }
 
