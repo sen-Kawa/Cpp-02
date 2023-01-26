@@ -82,6 +82,6 @@ Fixed::~Fixed(void)
 
 std::ostream & operator<<(std::ostream &o, Fixed const &i)
 {
-	o << i.getRawBits();
+	o << i.toFloat();
 	return (o);
 }
