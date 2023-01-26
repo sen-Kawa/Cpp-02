@@ -72,6 +72,24 @@ bool Fixed::operator<(const Fixed &param) const
 	return (this->number < param.number);
 }
 
+Fixed Fixed::operator+(const Fixed &param) const
+{
+	return (this->toFloat() + param.toFloat());
+}
+
+Fixed Fixed::operator-(const Fixed &param) const
+{
+	return (this->toFloat() - param.toFloat());
+}
+Fixed Fixed::operator*(const Fixed &param) const
+{
+	return (this->toFloat() * param.toFloat());
+}
+Fixed Fixed::operator/(const Fixed &param) const
+{
+	return (this->toFloat() / param.toFloat());
+}
+
 Fixed &	Fixed::operator=(const Fixed &assign)
 {
 	if (this != &assign)
