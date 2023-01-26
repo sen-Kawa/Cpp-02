@@ -1,4 +1,5 @@
 #include "Fixed.class.hpp"
+#include <iterator>
 
 int	Fixed::getRawBits(void) const
 {
@@ -78,4 +79,10 @@ Fixed::~Fixed(void)
 		<< "Destructor called"
 	<< std::endl;
 	return ;
+}
+
+std::ostream & operator<<(std::ostream &o, Fixed const &i)
+{
+	o << i.getRawBits();
+	return (o);
 }
