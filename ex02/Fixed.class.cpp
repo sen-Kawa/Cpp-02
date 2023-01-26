@@ -81,13 +81,41 @@ Fixed Fixed::operator-(const Fixed &param) const
 {
 	return (this->toFloat() - param.toFloat());
 }
+
 Fixed Fixed::operator*(const Fixed &param) const
 {
 	return (this->toFloat() * param.toFloat());
 }
+
 Fixed Fixed::operator/(const Fixed &param) const
 {
 	return (this->toFloat() / param.toFloat());
+}
+
+Fixed &Fixed::operator++(void)
+{
+	this->number++;
+	return (*this);
+}
+
+Fixed &Fixed::operator--(void)
+{
+	this->number--;
+	return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed	temp = *this;
+	++number;
+	return (temp);
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed	temp = *this;
+	--number;
+	return (temp);
 }
 
 Fixed &	Fixed::operator=(const Fixed &assign)
