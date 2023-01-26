@@ -2,6 +2,7 @@
 # define FIXED_CLASS_HPP
 
 #include <iostream>
+#include <ostream>
 
 class Fixed
 {
@@ -26,5 +27,7 @@ class Fixed
 		~Fixed(void);
 
 };
+
+std::ostream &	operator<< (std::ostream &o, Fixed const &i);
 
 #endif
