@@ -10,7 +10,11 @@ Fixed &	Fixed::operator=(const Fixed &assign)
 	std::cout
 		<< "Copy assignment operator called"
 	<< std::endl;
-	
+	if (this != &assign)
+	{
+		this->number = assign.getRawBits();
+	}
+	return (*this);
 }
 
 Fixed::Fixed(Fixed const &src)
