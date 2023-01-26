@@ -19,5 +19,8 @@ Fixed::Fixed(Fixed const &src)
 
 Fixed::~Fixed(void)
 {
+	std::cout
+		<< "Destructor called"
+	<< std::endl;
 	return ;
 }
